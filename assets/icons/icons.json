@@ -1,0 +1,16 @@
+{
+ "source": {
+  "kind": "file",
+  "ref": "assets/img/elia-country-house-icon.svg"
+ },
+ "source_md5": "a8197a11081e6da41ec8d206a2685c31",
+ "version": "1598eb67",
+ "tile": null,
+ "crop": null,
+ "header": [
+  "inline",
+  "index.html",
+  "5b656ac8831c789024385320b959d005"
+ ],
+ "made": "2026-11-13"
+}
