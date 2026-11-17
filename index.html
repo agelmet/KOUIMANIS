@@ -14,10 +14,10 @@
 <!-- /advon-icons -->
 <meta name="description" content="Elia Country House: μονοκατοικία 230 m² με ιδιωτική θερμαινόμενη πισίνα, 5 υπνοδωμάτια και 5 μπάνια, για έως 13 άτομα, στον ελαιώνα του Άνω Αλεποχωρίου Αττικής.">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="msvalidate.01" content="B111344056B4F7484DEA53457F44A3C3">
 <!-- advon-en -->
 <script>try{localStorage.setItem("elia-lang","el")}catch(e){}</script>
 <!-- /advon-en -->
+<meta name="msvalidate.01" content="B111344056B4F7484DEA53457F44A3C3">
 <script id="advon-draft-guard">/* Advon: drafts stay out of Google; the real domain is untouched */(function(h){if(/(^|\.)(drafts\.advonmedia\.com|github\.io|netlify\.app)$/.test(h)){var m=document.createElement("meta");m.name="robots";m.content="noindex,nofollow";document.head.appendChild(m)}})(location.hostname)</script>
 <meta name="theme-color" content="#161A11">
 <meta name="color-scheme" content="light only">
@@ -69,6 +69,68 @@
 @keyframes advon-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.advon-ck{animation:none}}
 </style>
+<style id="cine-css">
+/* hero drone loop */
+.hv-v{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease;pointer-events:none}
+.hv-v.on{opacity:1}
+@media (prefers-reduced-motion:reduce){.hv-v{display:none}}
+.tlink.vplay{border:0;padding:0;gap:12px}
+.tlink.vplay i{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.08);position:relative;transition:transform .35s var(--ease),background .3s}
+.tlink.vplay i::after{content:"";position:absolute;top:-1px;right:-1px;bottom:-1px;left:-1px;border-radius:50%;border:1px solid rgba(238,223,174,.7);animation:vring 2.6s ease-out infinite}
+.tlink.vplay svg{width:14px;height:14px;margin-left:3px;fill:#fff}
+.tlink.vplay span{border-bottom:1px solid currentColor;padding-bottom:3px}
+@keyframes vring{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.55);opacity:0}}
+@media (hover:hover){.tlink.vplay:hover i{transform:scale(1.08);background:rgba(255,255,255,.18)}}
+@media (prefers-reduced-motion:reduce){.tlink.vplay i::after{animation:none;opacity:0}}
+/* «Η βίλα σε κίνηση» */
+.cine{background:var(--night);color:#EDE8DC;overflow:hidden}
+.cine::before{content:"";position:absolute;top:-20%;left:50%;width:120vw;height:70%;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(217,194,138,.10),transparent 70%);pointer-events:none;z-index:-1}
+.cine h2{color:#fff}.cine h2 em{color:#EEDFAE}.cine .lead{color:rgba(237,232,220,.76)}
+.cine-g{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:clamp(20px,2.4vw,32px);align-items:center}
+.cine-w{display:flex;justify-content:center}
+.cine-st{position:relative;width:min(100%,calc(74vh * var(--arn,1.778)));aspect-ratio:var(--ar,1024/576);border-radius:22px;overflow:hidden;background:#000;box-shadow:0 50px 100px -40px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.07);transition:aspect-ratio .7s var(--ease),width .7s var(--ease)}
+.cine-st video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
+.cine-pl{position:absolute;top:0;right:0;bottom:0;left:0;display:grid;place-items:center;align-content:center;gap:18px;border:0;padding:0;cursor:pointer;color:#fff;font:600 15px/1.3 var(--sans);letter-spacing:.02em;background:linear-gradient(0deg,rgba(14,17,10,.62),rgba(14,17,10,.08) 60%);transition:opacity .5s ease}
+.cine-pl b{display:grid;place-items:center;width:clamp(76px,8vw,104px);height:clamp(76px,8vw,104px);border-radius:50%;background:rgba(246,242,233,.94);box-shadow:0 20px 50px -14px rgba(0,0,0,.6);position:relative;transition:transform .45s var(--ease)}
+.cine-pl b::before,.cine-pl b::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;border-radius:50%;border:1px solid rgba(246,242,233,.8);animation:vring 2.8s ease-out infinite}
+.cine-pl b::after{animation-delay:1.4s}
+.cine-pl svg{width:30%;height:30%;margin-left:7%;fill:var(--olive)}
+.cine-pl .cl{display:none;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.cine-pl .cl small{display:block;font-weight:500;opacity:.8;margin-top:4px}
+.cine-st[data-cur="0"] .cl0,.cine-st[data-cur="1"] .cl1,.cine-st[data-cur="2"] .cl2{display:block}
+@media (hover:hover){.cine-pl:hover b{transform:scale(1.07)}}
+.cine-st.on .cine-pl{opacity:0;pointer-events:none}
+.cine-l{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:ch}
+.ch{width:100%;display:grid;grid-template-columns:118px minmax(0,1fr);gap:16px;align-items:center;padding:12px;border-radius:18px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);color:inherit;text-align:left;font:inherit;cursor:pointer;position:relative;overflow:hidden;transition:background .3s,border-color .3s,transform .35s var(--ease)}
+.ch-i{position:relative;aspect-ratio:16/10;border-radius:11px;overflow:hidden;background:#000}
+.ch-i img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.ch-i::after{content:attr(data-d);position:absolute;right:6px;bottom:6px;font:600 11px/1 var(--sans);padding:4px 6px;border-radius:6px;background:rgba(0,0,0,.6);color:#fff;font-variant-numeric:tabular-nums}
+.ch-t{display:block;font:400 20px/1.15 var(--serif);color:#fff}
+.ch-t::before{counter-increment:ch;content:"0" counter(ch);display:block;font:600 11px/1 var(--sans);letter-spacing:.2em;color:var(--gold);margin-bottom:8px}
+.ch-s{display:block;font-size:13.5px;line-height:1.45;color:rgba(237,232,220,.62);margin-top:6px}
+.ch .bar{position:absolute;left:12px;right:12px;bottom:0;height:2px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
+.ch .bar::after{content:"";position:absolute;top:0;left:0;bottom:0;width:100%;background:var(--gold);transform-origin:left;transform:scaleX(var(--p,0))}
+.ch.on{background:rgba(217,194,138,.10);border-color:rgba(217,194,138,.42)}
+@media (hover:hover){.ch:hover{background:rgba(255,255,255,.06);transform:translateX(-4px)}.ch:hover .ch-i img{transform:scale(1.06)}}
+.ch:active{transform:scale(.985)}
+.tour{margin-top:clamp(64px,8vw,112px);display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(30px,5vw,72px);align-items:center}
+.tour h3{font-size:clamp(28px,3vw,42px);font-weight:300;color:#fff;line-height:1.1}
+.tour h3 em{font-style:italic;color:#EEDFAE}
+.tour p{color:rgba(237,232,220,.76);margin-top:18px;max-width:46ch}
+.tour .kick{color:var(--gold)}
+.tour-c{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:22px 0 26px;padding:0}
+.tour-c li{font:600 12.5px/1 var(--sans);padding:9px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:rgba(237,232,220,.85)}
+.tour .tlink{color:#fff}
+.tour-f{position:relative;aspect-ratio:16/10;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:0 50px 100px -40px rgba(0,0,0,.85)}
+.tour-f iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
+.tour-f .cn{position:absolute;pointer-events:none;width:22px;height:22px;border-color:rgba(238,223,174,.85);border-style:solid;border-width:0;z-index:2;transition:transform .6s var(--ease)}
+.tour-f .cn.a{top:12px;left:12px;border-top-width:1.5px;border-left-width:1.5px}.tour-f .cn.b{top:12px;right:12px;border-top-width:1.5px;border-right-width:1.5px}
+.tour-f .cn.c{bottom:12px;left:12px;border-bottom-width:1.5px;border-left-width:1.5px}.tour-f .cn.d{bottom:12px;right:12px;border-bottom-width:1.5px;border-right-width:1.5px}
+.tour-f.lit .cn{opacity:0}
+@media (max-width:980px){.cine-g{grid-template-columns:minmax(0,1fr)}.cine-st{width:100%;max-width:calc(70vh * var(--arn,1.778))}.cine-l{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.ch{grid-template-columns:minmax(0,1fr);gap:10px;padding:10px}.ch-s{display:none}.ch-t{font-size:17px}.tour{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){.cine-l{grid-template-columns:minmax(0,1fr)}.ch{grid-template-columns:104px minmax(0,1fr);gap:14px}.ch-s{display:block}.tour-f{aspect-ratio:4/5}.cine-st{border-radius:16px}}
+@media (prefers-reduced-motion:reduce){.cine-pl b::before,.cine-pl b::after{animation:none;opacity:0}.cine-st{transition:none}}
+</style>
 </head>
 <body>
 <!-- ELIA COUNTRY HOUSE · Advon Media · style «Ελαιώνας» (warm editorial × countryside luxury) · opening «Παντζούρια» (louvred shutters swing open in 3D) · signatures: «Ποιος κοιμάται πού» sleeping planner, pinned horizontal pool walk, scroll-drawn road of distances -->
@@ -102,7 +164,7 @@
  <div class="wrap">
   <a class="brand" href="#top" aria-label="Elia Country House — αρχή της σελίδας" data-en-aria="Elia Country House — back to top"><svg aria-hidden="true"><use href="#mk"/></svg><span class="bt"><span class="b1">Elia</span><span class="b2">Country House</span></span></a>
   <nav class="nav" aria-label="Κύρια πλοήγηση" data-en-aria="Main navigation">
-   <a href="#spiti" data-en="The villa">Η βίλα</a><a href="#pisina" data-en="Pool">Πισίνα</a><a href="#ypnodomatia" data-en="Bedrooms">Υπνοδωμάτια</a><a href="#perioxi" data-en="The area">Περιοχή</a><a href="#kritikes" data-en="Reviews">Κριτικές</a><a href="#kratisi" data-en="Contact">Επικοινωνία</a>
+   <a href="#spiti" data-en="The villa">Η βίλα</a><a href="#pisina" data-en="Pool">Πισίνα</a><a href="#ypnodomatia" data-en="Bedrooms">Υπνοδωμάτια</a><a href="#video" data-en="Video &amp; 3D">Βίντεο &amp; 3D</a><a href="#perioxi" data-en="The area">Περιοχή</a><a href="#kritikes" data-en="Reviews">Κριτικές</a><a href="#kratisi" data-en="Contact">Επικοινωνία</a>
   </nav>
   <div class="hd-r">
    <div class="lang"><button type="button" data-l="el" aria-pressed="true" aria-label="Ελληνικά"><span class="fl"><svg preserveAspectRatio="xMidYMid slice"><use href="#fl-gr"/></svg></span></button><button type="button" data-l="en" aria-pressed="false" aria-label="English"><span class="fl"><svg preserveAspectRatio="xMidYMid slice"><use href="#fl-en"/></svg></span></button></div>
@@ -114,7 +176,7 @@
 <div class="mm" id="mm">
  <button class="mm-x" id="mmx" type="button" aria-label="Κλείσιμο μενού" data-en-aria="Close menu"><svg><use href="#i-x"/></svg></button>
  <nav aria-label="Μενού κινητού" data-en-aria="Mobile menu">
-  <a href="#spiti" style="--i:0" data-en="The villa">Η βίλα</a><a href="#pisina" style="--i:1" data-en="Pool &amp; garden">Πισίνα &amp; κήπος</a><a href="#mesa" style="--i:2" data-en="Inside">Μέσα στο σπίτι</a><a href="#ypnodomatia" style="--i:3" data-en="Bedrooms">Υπνοδωμάτια</a><a href="#perioxi" style="--i:4" data-en="The area">Περιοχή</a><a href="#kritikes" style="--i:5" data-en="Reviews">Κριτικές</a><a href="#kratisi" style="--i:6" data-en="Booking &amp; contact">Κράτηση &amp; επικοινωνία</a>
+  <a href="#spiti" style="--i:0" data-en="The villa">Η βίλα</a><a href="#pisina" style="--i:1" data-en="Pool &amp; garden">Πισίνα &amp; κήπος</a><a href="#mesa" style="--i:2" data-en="Inside">Μέσα στο σπίτι</a><a href="#ypnodomatia" style="--i:3" data-en="Bedrooms">Υπνοδωμάτια</a><a href="#video" style="--i:4" data-en="Video &amp; 3D tour">Βίντεο &amp; 3D περιήγηση</a><a href="#perioxi" style="--i:5" data-en="The area">Περιοχή</a><a href="#kritikes" style="--i:6" data-en="Reviews">Κριτικές</a><a href="#kratisi" style="--i:7" data-en="Booking &amp; contact">Κράτηση &amp; επικοινωνία</a>
  </nav>
  <div class="mm-c"><a class="btn" href="tel:+306972019513"><svg width="18" height="18"><use href="#i-ph"/></svg><span data-en="Call">Κλήση</span></a><a class="btn ghost" href="#kratisi" data-en="Booking request">Αίτημα κράτησης</a></div>
 </div>
@@ -122,7 +184,7 @@
 <main id="main">
 <!-- ===== HERO ===== -->
 <section class="hero" id="top">
- <div class="hero-m" id="heroM"><img src="assets/img/elia-country-house-alepochori-enaerio-souroupo-vouna-1920.webp" srcset="assets/img/elia-country-house-alepochori-enaerio-souroupo-vouna-1280.webp 1280w, assets/img/elia-country-house-alepochori-enaerio-souroupo-vouna-1920.webp 1920w, assets/img/elia-country-house-alepochori-enaerio-souroupo-vouna-2400.webp 2400w" sizes="100vw" width="2400" height="1798" alt="Το Elia Country House από ψηλά το σούρουπο, με την πισίνα, τον ελαιώνα και τα βουνά" data-en-alt="Elia Country House from above at dusk, with the pool, the olive grove and the mountains" fetchpriority="high" decoding="async"></div>
+ <div class="hero-m" id="heroM"><img src="assets/img/elia-country-house-alepochori-enaerio-souroupo-vouna-1920.webp" srcset="assets/img/elia-country-house-alepochori-enaerio-souroupo-vouna-1280.webp 1280w, assets/img/elia-country-house-alepochori-enaerio-souroupo-vouna-1920.webp 1920w, assets/img/elia-country-house-alepochori-enaerio-souroupo-vouna-2400.webp 2400w" sizes="100vw" width="2400" height="1798" alt="Το Elia Country House από ψηλά το σούρουπο, με την πισίνα, τον ελαιώνα και τα βουνά" data-en-alt="Elia Country House from above at dusk, with the pool, the olive grove and the mountains" fetchpriority="high" decoding="async"><video class="hv-v" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-webm="assets/video/elia-country-house-alepochori-drone-loop.webm" data-mp4="assets/video/elia-country-house-alepochori-drone-loop.mp4"></video></div>
  <div class="hleaf" aria-hidden="true"><i style="--x:62%;--s:22px;--t:17s;--dl:1s;--c:#9AA67A"></i><i style="--x:78%;--s:16px;--t:21s;--dl:5s;--c:#C9C59A"></i><i style="--x:88%;--s:20px;--t:19s;--dl:9s;--c:#7E8A5E"></i><i style="--x:70%;--s:14px;--t:23s;--dl:13s;--c:#B7BC8C"></i><i style="--x:94%;--s:18px;--t:18s;--dl:3s;--c:#8E9873"></i><i style="--x:55%;--s:13px;--t:25s;--dl:15s;--c:#A9B283"></i></div>
  <div class="hero-c">
   <div>
@@ -130,7 +192,7 @@
    <p class="disp" id="hDisp" data-split="1" data-en="The house among the <em>olive trees</em>.">Το σπίτι ανάμεσα στις <em>ελιές</em>.</p>
    <p class="sub h-a" style="--d:2" data-en="A 230 m² detached country house with five bedrooms, five bathrooms and a heated pool, in a quiet olive grove of West Attica — between the mountains and the sea of the Corinthian Gulf.">Μονοκατοικία 230 m² με πέντε υπνοδωμάτια, πέντε μπάνια και θερμαινόμενη πισίνα, μέσα σε έναν ήσυχο ελαιώνα της Δυτικής Αττικής — ανάμεσα στο βουνό και στη θάλασσα του Κορινθιακού.</p>
    <ul class="hchips h-a" style="--d:3"><li data-en="5 bedrooms">5 υπνοδωμάτια</li><li data-en="5 bathrooms">5 μπάνια</li><li data-en="Up to 13 guests">Έως 13 επισκέπτες</li><li data-en="Heated pool">Θερμαινόμενη πισίνα</li></ul>
-   <div class="hcta h-a" style="--d:4"><a class="btn" href="#kratisi" data-en="Booking request">Αίτημα κράτησης</a><a class="tlink" href="#spiti"><span data-en="Discover the villa">Δείτε τη βίλα</span><svg><use href="#ar"/></svg></a></div>
+   <div class="hcta h-a" style="--d:4"><a class="btn" href="#kratisi" data-en="Booking request">Αίτημα κράτησης</a><a class="tlink vplay" href="#video" data-cine="0"><i aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></i><span data-en="Watch the video">Δείτε το βίντεο</span></a></div>
   </div>
   <a class="score h-a" style="--d:5" href="#kritikes"><b>9,4</b><span><strong data-en="Superb">Εξαιρετικό</strong><span data-en="Guest rating on Booking.com">Βαθμολογία επισκεπτών στο Booking.com</span></span></a>
   <form class="hbar h-a" style="--d:6" id="hbar" onsubmit="return false" aria-label="Γρήγορο αίτημα διαθεσιμότητας" data-en-aria="Quick availability request">
@@ -308,6 +370,28 @@
 </section>
 
 <!-- ===== GALLERY ===== -->
+<section class="sec cine" id="video">
+ <div class="wrap">
+  <div class="head"><div><div class="kick" style="color:var(--gold)" data-en="Video &amp; 3D tour">Βίντεο &amp; 3D περιήγηση</div><h2 class="fx" data-split="1" data-en="The villa <em>in motion</em>.">Η βίλα <em>σε κίνηση</em>.</h2></div><p class="lead rv" data-en="Three short films of Elia Country House — and a 3D tour to walk through the house before you arrive. Turn the sound on.">Τρία μικρά φιλμ από το Elia Country House — και μια 3D περιήγηση για να περπατήσετε μέσα στο σπίτι πριν έρθετε. Ανοίξτε τον ήχο.</p></div>
+  <div class="cine-g">
+   <div class="cine-w rv"><div class="cine-st" id="cineSt" data-cur="0" style="--ar:1024/576;--arn:1.778">
+    <video id="cineV" playsinline preload="none" poster="assets/video/elia-country-house-video-periigisi-poster.webp" src="assets/video/elia-country-house-video-periigisi.mp4" aria-label="Βίντεο: Περιήγηση στη βίλα" data-en-aria="Video: A tour of the villa"></video>
+    <button type="button" class="cine-pl" id="cinePl" aria-label="Αναπαραγωγή βίντεο" data-en-aria="Play video"><b aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></b><span class="cl cl0"><span data-en="Play · A tour of the villa">Αναπαραγωγή · Περιήγηση στη βίλα</span><small>1:33 · <span data-en="with sound">με ήχο</span></small></span><span class="cl cl1"><span data-en="Play · The details">Αναπαραγωγή · Οι λεπτομέρειες</span><small>1:01 · <span data-en="with sound">με ήχο</span></small></span><span class="cl cl2"><span data-en="Play · From above">Αναπαραγωγή · Από ψηλά</span><small>1:00 · <span data-en="with sound">με ήχο</span></small></span></button>
+   </div></div>
+   <ol class="cine-l"><li><button type="button" class="ch rv on" style="--d:1" data-src="assets/video/elia-country-house-video-periigisi.mp4" data-poster="assets/video/elia-country-house-video-periigisi-poster.webp" data-ar="1024/576" data-arn="1.778" aria-pressed="true"><span class="ch-i" data-d="1:33"><img src="assets/video/elia-country-house-video-periigisi-poster-480.webp" width="480" height="270" alt="Το Elia Country House με την πέργκολα και την πισίνα" data-en-alt="Elia Country House with the pergola and the pool" loading="lazy" decoding="async"></span><span><span class="ch-t" data-en="A tour of the villa">Περιήγηση στη βίλα</span><span class="ch-s" data-en="From the olive grove to the rooms: every space, inside and out.">Από τον ελαιώνα ως τα δωμάτια: όλοι οι χώροι, μέσα κι έξω.</span></span><span class="bar" aria-hidden="true"></span></button></li><li><button type="button" class="ch rv" style="--d:2" data-src="assets/video/elia-country-house-video-leptomereies.mp4" data-poster="assets/video/elia-country-house-video-leptomereies-poster.webp" data-ar="816/1024" data-arn="0.797" aria-pressed="false"><span class="ch-i" data-d="1:01"><img src="assets/video/elia-country-house-video-leptomereies-poster-480.webp" width="480" height="602" alt="Το σαλόνι με το τζάκι και τους πίνακες" data-en-alt="The living room with the fireplace and the paintings" loading="lazy" decoding="async"></span><span><span class="ch-t" data-en="The details">Οι λεπτομέρειες</span><span class="ch-s" data-en="The crystals, the clock, the timber roof, the light on the terraces.">Οι κρύσταλλοι, το ρολόι, η ξύλινη στέγη, το φως στις βεράντες.</span></span><span class="bar" aria-hidden="true"></span></button></li><li><button type="button" class="ch rv" style="--d:3" data-src="assets/video/elia-country-house-video-apo-psila.mp4" data-poster="assets/video/elia-country-house-video-apo-psila-poster.webp" data-ar="1024/576" data-arn="1.778" aria-pressed="false"><span class="ch-i" data-d="1:00"><img src="assets/video/elia-country-house-video-apo-psila-poster-480.webp" width="480" height="270" alt="Η βίλα και η πισίνα από ψηλά" data-en-alt="The villa and the pool from above" loading="lazy" decoding="async"></span><span><span class="ch-t" data-en="From above">Από ψηλά</span><span class="ch-s" data-en="The house, the pool and the olive grove by drone, until dusk.">Το σπίτι, η πισίνα και ο ελαιώνας από drone, ως το σούρουπο.</span></span><span class="bar" aria-hidden="true"></span></button></li></ol>
+  </div>
+  <div class="tour">
+   <div>
+    <div class="kick rv" data-en="3D tour">3D περιήγηση</div>
+    <h3 class="rv" style="--d:1" data-en="Walk through the house <em>before you arrive</em>.">Περπατήστε μέσα στο σπίτι <em>πριν έρθετε</em>.</h3>
+    <p class="rv" style="--d:2" data-en="A 3D view of the whole villa: move from room to room and look around in every direction, on a computer, phone or tablet.">Μια 3D απεικόνιση όλης της βίλας: προχωρήστε από δωμάτιο σε δωμάτιο και κοιτάξτε γύρω σας προς κάθε κατεύθυνση, σε υπολογιστή, κινητό ή tablet.</p>
+    <ul class="tour-c rv" style="--d:3"><li data-en="5 bedrooms">5 υπνοδωμάτια</li><li data-en="5 bathrooms">5 μπάνια</li><li data-en="230 m²">230 m²</li><li data-en="Pool &amp; garden">Πισίνα &amp; κήπος</li></ul>
+    <a class="tlink rv" style="--d:4" href="https://my.see-through.photography/tour/elia-country-house-villa" target="_blank" rel="noopener"><span data-en="Open the 3D tour full screen">Άνοιγμα της 3D περιήγησης σε πλήρη οθόνη</span><svg><use href="#ar"/></svg></a>
+   </div>
+   <div class="tour-f rv" style="--d:2" id="tourF"><span class="cn a"></span><span class="cn b"></span><span class="cn c"></span><span class="cn d"></span><iframe src="about:blank" data-advon-src="https://my.see-through.photography/tour/elia-country-house-villa" data-advon-kind="tour" data-advon-provider="See-Through Photography" data-advon-link="https://my.see-through.photography/tour/elia-country-house-villa" title="3D περιήγηση στο Elia Country House" data-en-title="3D tour of Elia Country House" allow="fullscreen; xr-spatial-tracking; accelerometer; gyroscope" allowfullscreen loading="lazy"></iframe></div>
+  </div>
+ </div>
+</section>
 <section class="sec gal" id="fotografies" style="padding-top:0">
  <div class="wrap">
   <div class="head"><div><div class="kick" data-en="Gallery">Φωτογραφίες</div><h2 class="fx" data-split="1" data-en="Corner <em>by corner</em>.">Γωνιά <em>γωνιά</em>.</h2></div><p class="lead rv" data-en="From the air and up close: the olive grove, the terraces, the rooms. Tap any photo to see it larger.">Από ψηλά και από κοντά: ο ελαιώνας, οι βεράντες, τα δωμάτια. Πατήστε σε μια φωτογραφία για να τη δείτε μεγαλύτερη.</p></div>
@@ -631,6 +715,35 @@
       .observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
+<script id="cine-js">
+(function(){
+ var RM=matchMedia('(prefers-reduced-motion:reduce)').matches,c=navigator.connection||{};
+ /* hero drone loop: after first paint, never on Save-Data / 2g / reduced motion, plays only on screen */
+ var hv=document.querySelector('.hv-v');
+ if(hv&&!RM&&!c.saveData&&!/2g/.test(c.effectiveType||'')){
+  var go=function(){['webm','mp4'].forEach(function(t){var so=document.createElement('source');so.src=hv.getAttribute('data-'+t);so.type='video/'+t;hv.appendChild(so)});
+   hv.addEventListener('playing',function(){hv.classList.add('on')},{once:true});hv.load();
+   new IntersectionObserver(function(e){e[0].isIntersecting&&!document.hidden?hv.play().catch(function(){}):hv.pause()},{threshold:.1}).observe(hv)};
+  addEventListener('load',function(){(window.requestIdleCallback||function(f){setTimeout(f,700)})(go,{timeout:2000})});
+ }
+ /* «Η βίλα σε κίνηση» */
+ var st=document.getElementById('cineSt');if(!st)return;
+ var v=document.getElementById('cineV'),pl=document.getElementById('cinePl'),chs=[].slice.call(document.querySelectorAll('.cine-l .ch')),cur=0;
+ function sel(i,play){if(i!==cur){cur=i;var b=chs[i];st.style.setProperty('--ar',b.getAttribute('data-ar'));st.style.setProperty('--arn',b.getAttribute('data-arn'));st.setAttribute('data-cur',i);
+   v.poster=b.getAttribute('data-poster');v.src=b.getAttribute('data-src');}
+  chs.forEach(function(b,k){b.classList.toggle('on',k===i);b.setAttribute('aria-pressed',k===i?'true':'false')});
+  if(play){st.classList.add('on');v.controls=true;var p=v.play();p&&p.catch(function(){st.classList.remove('on')})}else st.classList.remove('on')}
+ pl.addEventListener('click',function(){sel(cur,true)});
+ chs.forEach(function(b,k){b.addEventListener('click',function(){if(k===cur&&!v.paused){v.pause();return}sel(k,true)})});
+ v.addEventListener('play',function(){st.classList.add('on');v.controls=true});
+ v.addEventListener('timeupdate',function(){if(v.duration)chs[cur].style.setProperty('--p',(v.currentTime/v.duration).toFixed(4))});
+ v.addEventListener('ended',function(){chs[cur].style.setProperty('--p',1);if(cur<chs.length-1)sel(cur+1,true);else{st.classList.remove('on')}});
+ new IntersectionObserver(function(e){if(!e[0].isIntersecting&&!v.paused)v.pause()},{threshold:0}).observe(st);
+ [].forEach.call(document.querySelectorAll('[data-cine]'),function(a){a.addEventListener('click',function(e){e.preventDefault();
+   var t=document.getElementById('video');t&&t.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});sel(+a.getAttribute('data-cine'),true)})});
+ var tf=document.getElementById('tourF');if(tf){var fr=tf.querySelector('iframe');new MutationObserver(function(){if(fr.getAttribute('data-advon-on'))tf.classList.add('lit')}).observe(fr,{attributes:true})}
 })();
 </script>
 <script id="advon-en-nav">/* flags = links between / and /en (Google ranks both) */document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("button[data-l],button[data-lang],a[data-l],a[data-lang],[data-set-lang]");if(!b)return;var l=b.getAttribute("data-l")||b.getAttribute("data-lang")||b.getAttribute("data-set-lang");if(l==="el"||(l!=="el"&&l!=="en"))return;e.preventDefault();e.stopImmediatePropagation();location.href=(l==="en"?"en":"./")+location.hash},true)</script>
